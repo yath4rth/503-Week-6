@@ -1,0 +1,17 @@
+public class Cap {
+	static boolean cap(char[] array)
+	{
+		for(char c : array)
+		{	
+			if(c<'A' || c>'Z')
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	public static void main(String[] args)
+	{
+		System.out.println(cap(new char[]{'A','B','C','9'}));
+	}
+}
