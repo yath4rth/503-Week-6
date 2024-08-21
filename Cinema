@@ -1,0 +1,67 @@
+public class Cinema 
+{
+	
+	final public boolean reserved = true;
+	public Boolean seats[][];
+
+	//------------------------------------------------
+	public int occupiedSeats()
+	{
+		int count = 0;
+		for(int r = 0;r< seats.length;r++)
+		{
+			for(int c = 0;c < seats[r].length;c++)
+			{
+				if(this.seats[r][c])
+				{
+					count++;
+				}
+			}
+		}
+		return count;	
+	}
+	//------------------------------------------------
+	public int numberOfSeats()
+	{
+		int count = 0;
+		for(int r = 0;r< seats.length;r++)
+		{
+			for(int c = 0;c < seats[r].length;c++)
+			{
+				count++;
+			}
+		}
+		return count;		
+	}
+	//------------------------------------------------
+	//complete this method
+	public double usagePercentage()
+	{
+		int count = 0;
+		for(int r = 0;r< seats.length;r++)
+		{
+			for(int c = 0;c < seats[r].length;c++)
+			{
+				return((double)occupiedSeats()/numberOfSeats())*100;
+			}
+		}
+		return 0.0;
+	}
+
+	//------------------------------------------------
+	public Cinema(Boolean[][] seats)
+	{
+		this.seats = seats;
+	}
+	public static void main(String[] args)
+	{
+		Boolean[][] seats = 
+			{{true, true, true},
+			 {true, true, true},
+			 {true, true, true}};
+
+			Cinema cinema = new Cinema(seats);
+			System.out.println(cinema.usagePercentage());
+	}
+	//------------------------------------------------
+}
