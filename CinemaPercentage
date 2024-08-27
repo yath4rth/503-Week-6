@@ -1,4 +1,4 @@
-public class Cinema 
+public class CinemaPercentage 
 {
 	
 	final public boolean reserved = true;
