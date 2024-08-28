@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class EnterString {
+	
+	public static void main(String[] args)
+	{
+		Scanner scan = new Scanner(System.in);
+		int length = 0;
+		do
+		{
+		System.out.println("Please Enter a String:");
+		String input = scan.nextLine();
+		length = input.length();
+		System.out.println("length = "+length);
+		} while(length!=0);
+	}
+}
