@@ -1,0 +1,23 @@
+
+public class longestString 
+{
+	public String longestString(String[] args)
+	{
+		String[] words = {"balls", "hello", "bye", "hwhajjbd"};
+		String longest = words[0];
+		for(int i=0; i<words.length; i++)
+		{
+			if(longest.length()<words[i].length())
+			{
+				longest = words[i];
+			}
+		}
+		return longest;
+	}
+	public static void main(String[] args)
+	{
+		
+		//longestString ls = new longestString();
+		//System.out.println(longestString);
+	}
+}
